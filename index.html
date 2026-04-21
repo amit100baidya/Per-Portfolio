@@ -998,6 +998,43 @@
       box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
     }
 
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: var(--panel);
+      padding: 32px 28px;
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border-accent);
+      background: rgba(255, 255, 255, 0.6);
+      font-family: inherit;
+      color: var(--text-bright);
+      font-size: .95rem;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--accent1);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+      background: #fff;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
     /* ── CV Download Section ── */
     .cv-section {
       padding: 80px 0;
@@ -1247,6 +1284,11 @@
         transform: none;
       }
     }
+
+    /* ── Certifications & New Animations ── */
+    .certifications-section {
+      background: linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.03), transparent);
+    }
   </style>
 </head>
 
@@ -1268,10 +1310,11 @@
         <li><a class="nav-link" href="#about">About</a></li>
         <li><a class="nav-link" href="#goals">Goals</a></li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#certifications">Certifications</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
         <li>
           <!-- ↓ UPDATE href to your actual CV PDF URL -->
-          <a class="btn-nav-cv" href="CV.pdf" download="Amit_Baidya_CV.pdf" target="_blank">
+          <a class="btn-nav-cv" href="CV.pdf" download="Amit_Baidya_CV.pdf" target="_blank" rel="noopener">
             <i class="fas fa-download"></i> CV
           </a>
         </li>
@@ -1553,6 +1596,84 @@
       </div>
     </section>
 
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section certifications-section" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-eyebrow">Milestones</div>
+          <h2 id="certifications-title" class="section-title">Certifications</h2>
+          <p class="section-subtitle">Professional credentials and continuous learning.</p>
+        </div>
+        <div class="projects-grid reveal" id="certificationsGrid">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/Tata.png" alt="Data Visualisation" loading="lazy">
+              <div class="project-overlay">
+                <a class="btn btn-primary"
+                  href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_oiteSfDc4Jgrc2844_1738512064783_completion_certificate.pdf"
+                  target="_blank" rel="noopener">View Certificate <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Data Visualisation: Empowering Business with Effective Insights</h3>
+              <p class="project-description">Tata Group</p>
+              <div class="project-tags"><span class="tag">Feb 2025</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/Google%20Data%20Analytics.png" alt="Google Data Analytics" loading="lazy">
+              <div class="project-overlay">
+                <a class="btn btn-primary" href="https://coursera.org/share/ca724c3a458f2d690980df88393dc630"
+                  target="_blank" rel="noopener">View Certificate <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Google Data Analytics</h3>
+              <p class="project-description">Google</p>
+              <div class="project-tags"><span class="tag">Jan 2025</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/Machinelearning.png" alt="Machine Learning Rock Star" loading="lazy">
+              <div class="project-overlay">
+                <a class="btn btn-primary" href="https://coursera.org/share/53d6ad0325dc14b582eaf41d81939abe"
+                  target="_blank" rel="noopener">View Certificate <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Machine Learning Rock Star – the End-to-End Practice</h3>
+              <p class="project-description">Coursera</p>
+              <div class="project-tags"><span class="tag">Mar 2024</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/Python%20for%20ds.png" alt="Python For DataScience" loading="lazy">
+              <div class="project-overlay">
+                <a class="btn btn-primary"
+                  href="https://www.credly.com/badges/1c2d8af1-d44a-43dd-a596-90ac125a26a7/linked_in_profile"
+                  target="_blank" rel="noopener">View Certificate <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Python For DataScience</h3>
+              <p class="project-description">IBM</p>
+              <div class="project-tags"><span class="tag">Verified</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta reveal" style="margin-top:40px;">
+          <p style="margin:0;color:var(--muted)">More certifications are on the way! I'm constantly learning.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section contact-section" aria-labelledby="contact-title">
       <div class="container">
@@ -1566,7 +1687,7 @@
             <div class="contact-item">
               <div class="contact-icon"><i class="fas fa-envelope"></i></div>
               <div>
-                <h3>Email</h3><a href="mailto:amitbaidya100@gmail.com">amitbaidya100@gmail.com</a>
+                <h3>Email</h3><a href="mailto:amitbaidya18082005@gmail.com">amitbaidya18082005@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
@@ -1582,9 +1703,7 @@
                 <p>Open to remote opportunities and collaborations worldwide</p>
               </div>
             </div>
-          </div>
-          <div>
-            <h3 style="margin-top:0;font-size:1.1rem;margin-bottom:16px">Find Me Online</h3>
+            <h3 style="margin-top:24px;font-size:1.1rem;margin-bottom:16px">Find Me Online</h3>
             <div class="social-row">
               <a class="social-icon-btn" href="https://www.linkedin.com/in/amitbaidya/" target="_blank" rel="noopener"
                 aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -1592,13 +1711,28 @@
                 aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a class="social-icon-btn" href="https://public.tableau.com/app/profile/amit.baidya" target="_blank"
                 rel="noopener" aria-label="Tableau Public"><i class="fas fa-chart-bar"></i></a>
-              <a class="social-icon-btn" href="mailto:amitbaidya100@gmail.com" aria-label="Email"><i
+              <a class="social-icon-btn" href="mailto:amitbaidya18082005@gmail.com" aria-label="Email"><i
                   class="fas fa-envelope"></i></a>
             </div>
             <p style="margin-top:20px;font-size:.9rem;color:var(--muted)">
               I typically respond within 24 hours. Feel free to reach out about data projects, collaborations, or just
               to talk data!
             </p>
+          </div>
+          <div>
+            <form class="contact-form" action="https://formsubmit.co/amitbaidya18082005@gmail.com" method="POST">
+              <h3 style="margin-top:0;font-size:1.2rem;margin-bottom:4px;color:var(--text-bright);">Send Me a Message
+              </h3>
+              <p style="font-size:0.9rem;color:var(--muted);margin-bottom:16px;">I will get back to you directly to your
+                email.</p>
+              <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+              <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+              <input type="hidden" name="_subject" value="New contact from your portfolio!">
+              <input type="hidden" name="_captcha" value="false">
+              <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top:8px;">Send Message
+                <i class="fas fa-paper-plane"></i></button>
+            </form>
           </div>
         </div>
       </div>
@@ -1733,7 +1867,7 @@
     // Project filtering
     (function () {
       const buttons = document.querySelectorAll('.filter-btn');
-      const cards = document.querySelectorAll('.project-card');
+      const cards = document.querySelectorAll('#projectsGrid .project-card');
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           buttons.forEach(b => b.classList.remove('active'));
@@ -1745,6 +1879,31 @@
           });
         });
       });
+    })();
+    // Dynamic Cursor Glow
+    (function () {
+      const glow = document.createElement('div');
+      glow.style.cssText = 'position: fixed; top: 0; left: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 60%); border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: 9999; transition: width 0.2s, height 0.2s; mix-blend-mode: multiply;';
+      document.body.appendChild(glow);
+
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let glowX = mouseX, glowY = mouseY;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animate() {
+        glowX += (mouseX - glowX) * 0.15;
+        glowY += (mouseY - glowY) * 0.15;
+        glow.style.transform = `translate(${glowX - 300}px, ${glowY - 300}px)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      document.addEventListener('mousedown', () => { glow.style.width = '400px'; glow.style.height = '400px'; glow.style.transform = `translate(${glowX - 200}px, ${glowY - 200}px)`; });
+      document.addEventListener('mouseup', () => { glow.style.width = '600px'; glow.style.height = '600px'; glow.style.transform = `translate(${glowX - 300}px, ${glowY - 300}px)`; });
     })();
   </script>
 </body>
